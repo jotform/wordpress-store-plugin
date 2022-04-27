@@ -17,8 +17,8 @@ import './style.scss';
 /**
  * Internal dependencies
  */
-import Edit from './edit';
-import save from './save';
+import EditMode from './EditMode';
+import PublishMode from './PublishMode';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -29,9 +29,9 @@ registerBlockType('create-block/wordpress-store-plugin', {
 	/**
 	 * @see ./edit.js
 	 */
-	edit: Edit,
+	edit: EditMode,
 	/**
-	 * @see ./save.js
+	 * @see ./publishMode.js
 	 */
-	save,
+	save: PublishMode,
 });

@@ -4,8 +4,8 @@
 	"name": "create-block/wordpress-store-plugin",
 	"version": "0.1.0",
 	"title": "Wordpress Store Plugin",
-	"category": "widgets",
-	"icon": "smiley",
+	"category": "embed",
+	"icon": "store",
 	"description": "Example static block scaffolded with Create Block tool.",
 	"supports": {
 		"html": false
