@@ -17,8 +17,8 @@ import './style.scss';
 /**
  * Internal dependencies
  */
-import EditMode from './EditMode';
-import PublishMode from './PublishMode';
+import EditMode from './edit/EditMode';
+import PublishMode from './publish/PublishMode';
 
 /**
  * Every block starts by registering a new block type definition.
