@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Wordpress Store Plugin
+ * Plugin Name:       Jotform Store Embed
  * Description:       Example static block scaffolded with Create Block tool.
  * Requires at least: 5.8
  * Requires PHP:      7.0
