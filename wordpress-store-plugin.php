@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Jotform Store Embed
- * Description:       Example static block scaffolded with Create Block tool.
+ * Description:       Create stores and embed to your website with Jotform Store Embed plugin.
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           0.1.0

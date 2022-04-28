@@ -1,7 +1,7 @@
 {
 	"name": "wordpress-store-plugin",
 	"version": "0.1.0",
-	"description": "Example static block scaffolded with Create Block tool.",
+	"description": "Create stores and embed to your website with Jotform Store Embed plugin.",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
