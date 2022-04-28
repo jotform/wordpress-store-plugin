@@ -1,14 +1,14 @@
-import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import { RawHTML } from '@wordpress/element';
 
-const PublishMode = () => {
+export const generateEmbedCode = (appId) => {
+	return `[embed]https://www.jotform.com/app/${appId}[/embed]`;
+};
+
+const PublishMode = ({ attributes }) => {
 	return (
-		<p {...useBlockProps.save()}>
-			{__(
-				'Jotform Store Plugin – Save',
-				'jotform-store-plugin'
-			)}
-		</p>
+		<RawHTML>
+			{generateEmbedCode(attributes.storeId)}
+		</RawHTML>
 	);
 };
 

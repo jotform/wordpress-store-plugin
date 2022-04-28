@@ -1,10 +1,13 @@
 import { useBlockProps } from '@wordpress/block-editor';
-import { useState } from '@wordpress/element';
 import './EditMode.scss';
 import StorePicker from './StorePicker';
 
-const EditMode = () => {
-	const [storeProps, setStoreProps] = useState(null);
+const EditMode = ({ attributes, setAttributes }) => {
+	const handleStoreSelection = (storeData) => {
+		if (storeData && storeData.id) {
+			setAttributes({ storeId: storeData.id });
+		}
+	};
 
 	return (
 		<div {...useBlockProps()}>
@@ -19,12 +22,8 @@ const EditMode = () => {
 					Select a store to embed to your site.
 				</div>
 				<div className='components-placeholder__fieldset'>
-					{storeProps && (
-						<div>
-							{storeProps.title}
-						</div>
-					)}
-					<StorePicker onStoreSelect={setStoreProps} />
+					{attributes.storeId && <span>{attributes.storeId}</span>}
+					<StorePicker onStoreSelect={handleStoreSelection} />
 				</div>
 			</div>
 		</div>
