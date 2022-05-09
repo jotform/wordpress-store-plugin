@@ -13,13 +13,5 @@
 	"textdomain": "wordpress-store-plugin",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-  	"attributes": {
-		"storeId": {
-		  "type": "string"
-		},
-	  	"storeTitle": {
-		  "type": "string"
-		}
-	}
+	"style": "file:./style-index.css"
 }

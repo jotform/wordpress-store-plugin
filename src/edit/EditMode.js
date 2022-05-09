@@ -3,13 +3,15 @@ import './EditMode.scss';
 import StorePicker from './StorePicker';
 
 const EditMode = ({ attributes, setAttributes }) => {
-	const { storeId, storeTitle } = attributes;
+	const { storeId, storeTitle, storeIcon } = attributes;
+	const storeExists = !!(storeId && storeTitle && storeIcon);
 
 	const handleStoreSelection = (storeData) => {
 		if (storeData) {
 			setAttributes({
 				storeId: storeData.id,
-				storeTitle: storeData.title
+				storeTitle: storeData.title,
+				storeIcon: storeData.icon
 			});
 		}
 	};
@@ -27,9 +29,14 @@ const EditMode = ({ attributes, setAttributes }) => {
 					Select a store to embed to your site.
 				</div>
 				<div className='components-placeholder__fieldset is-column-layout'>
-					<div>{storeTitle}</div>
+					{storeExists &&
+						<div className='preview-area'>
+							<img src={storeIcon} className='preview-area-img' />
+							<span className='preview-area-text'>{storeTitle}</span>
+						</div>
+					}
 					<div>
-						<StorePicker onStoreSelect={handleStoreSelection} />
+						<StorePicker onStoreSelect={handleStoreSelection} forEdit={storeExists} />
 					</div>
 				</div>
 			</div>

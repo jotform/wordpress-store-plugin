@@ -5,5 +5,16 @@ import PublishMode from './publish/PublishMode';
 
 registerBlockType('create-block/wordpress-store-plugin', {
 	edit: EditMode,
-	save: PublishMode
+	save: PublishMode,
+	attributes: {
+		storeId: {
+			type: 'string'
+		},
+		storeTitle: {
+			type: 'string'
+		},
+		storeIcon: {
+			type: 'string'
+		}
+	}
 });

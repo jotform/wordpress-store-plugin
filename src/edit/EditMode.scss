@@ -31,3 +31,28 @@
   width: 100%;
   height: 100%;
 }
+
+.preview-area {
+  border: 1px solid #c8ceed;
+  border-radius: 4px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  margin-bottom: 10px;
+
+  &-img {
+	width: 32px;
+	height: 32px;
+	min-width: 32px;
+	min-height: 32px;
+	border-radius: 4px;
+	margin: 12px;
+  }
+
+  &-text {
+	// color: #0a1551;
+	font-size: 14px;
+	font-weight: 600;
+  }
+}
