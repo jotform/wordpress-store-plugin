@@ -1,6 +1,8 @@
+import { Icon } from '@wordpress/components';
 import { useBlockProps } from '@wordpress/block-editor';
 import './EditMode.scss';
 import StorePicker from './StorePicker';
+import { jfTrashIcon } from '../assets/Icons';
 
 const EditMode = ({ attributes, setAttributes }) => {
 	const { storeId, storeTitle, storeIcon } = attributes;
@@ -16,6 +18,14 @@ const EditMode = ({ attributes, setAttributes }) => {
 		}
 	};
 
+	const handleStoreRemove = () => {
+		setAttributes({
+			storeId: null,
+			storeTitle: null,
+			storeIcon: null
+		});
+	};
+
 	return (
 		<div {...useBlockProps()}>
 			<div className='components-placeholder wp-block-embed is-large'>
@@ -25,20 +35,31 @@ const EditMode = ({ attributes, setAttributes }) => {
 					</span>
 					Jotform Store Embed
 				</div>
-				<div className='components-placeholder__instructions'>
-					Select a store to embed to your site.
-				</div>
-				<div className='components-placeholder__fieldset is-column-layout'>
-					{storeExists &&
-						<div className='preview-area'>
-							<img src={storeIcon} className='preview-area-img' />
-							<span className='preview-area-text'>{storeTitle}</span>
+				{!storeExists &&
+					<>
+						<div className='components-placeholder__instructions'>
+							Select a store to embed to your site.
 						</div>
-					}
-					<div>
-						<StorePicker onStoreSelect={handleStoreSelection} forEdit={storeExists} />
+						<div className='components-placeholder__fieldset'>
+							<StorePicker onStoreSelect={handleStoreSelection} />
+						</div>
+					</>
+				}
+				{storeExists &&
+					<div className='components-placeholder__fieldset'>
+						<div className='preview-area'>
+							<div className='preview-area-icon'>
+								<img src={storeIcon} />
+							</div>
+							<div className='preview-area-text'>
+								{storeTitle}
+							</div>
+							<div className='preview-area-button' onClick={handleStoreRemove}>
+								<Icon icon={jfTrashIcon} />
+							</div>
+						</div>
 					</div>
-				</div>
+				}
 			</div>
 		</div>
 	);
