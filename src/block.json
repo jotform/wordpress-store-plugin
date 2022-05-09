@@ -17,6 +17,9 @@
   	"attributes": {
 		"storeId": {
 		  "type": "string"
+		},
+	  	"storeTitle": {
+		  "type": "string"
 		}
 	}
 }
