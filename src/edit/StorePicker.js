@@ -1,7 +1,7 @@
 import { Button, Modal } from '@wordpress/components';
 import { useCallback, useEffect, useState } from '@wordpress/element';
 
-const STORE_PICKER_URL = 'https://www.jotform.com/resource-picker/store-picker.php';
+const STORE_PICKER_URL = 'https://www.jotform.com/resource-picker/wrapper.php?picker=store';
 const JOTFORM_ORIGIN = 'jotform.com';
 
 const StorePicker = ({ onStoreSelect, forEdit }) => {
