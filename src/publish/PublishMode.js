@@ -7,13 +7,12 @@ export const generateEmbedCode = (appId) => {
 
 const PublishMode = ({ attributes }) => {
 	if (!attributes || !attributes.storeId) return null;
+	const { className: pluginClass } = useBlockProps.save();
 	return (
-		<div {...useBlockProps.save()}>
-			<div className='publish-frame-wrapper'>
-				<RawHTML>
-					{generateEmbedCode(attributes.storeId)}
-				</RawHTML>
-			</div>
+		<div className={`${pluginClass} forPublish alignwide`}>
+			<RawHTML>
+				{generateEmbedCode(attributes.storeId)}
+			</RawHTML>
 		</div>
 	);
 };

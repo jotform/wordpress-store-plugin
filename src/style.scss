@@ -6,7 +6,7 @@
  */
 
 .wp-block-create-block-wordpress-store-plugin {
-  .publish-frame-wrapper {
+  &.forPublish {
 	iframe {
 	  border: 1px solid #F3F3FE;
 	}
