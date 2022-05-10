@@ -1,7 +1,7 @@
 import { RawHTML } from '@wordpress/element';
 
 export const generateEmbedCode = (appId) => {
-	return `[embed]https://www.jotform.com/app/${appId}[/embed]`;
+	return `[embed]https://www.jotform.com/app/store/${appId}[/embed]`;
 };
 
 const PublishMode = ({ attributes }) => {

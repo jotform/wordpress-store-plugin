@@ -21,7 +21,7 @@
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_wordpress_store_plugin_block_init() {
-	wp_oembed_add_provider( "#https?://(secure\.|www\.|app\.)?(my)?jotform(pro|eu|z)?\.(com|net|us|ca|me|co)(/app)?/[0-9]*#i", "https://www.jotform.com/oembed", true);
+	wp_oembed_add_provider( "#https?://(secure\.|www\.|app\.)?(my)?jotform(pro|eu|z)?\.(com|net|us|ca|me|co)(/app/store)?/[0-9]*#i", "https://www.jotform.com/oembed", true);
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'create_block_wordpress_store_plugin_block_init' );
