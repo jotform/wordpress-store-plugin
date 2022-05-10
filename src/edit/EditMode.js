@@ -3,9 +3,10 @@ import { useBlockProps } from '@wordpress/block-editor';
 import './EditMode.scss';
 import StorePicker from './StorePicker';
 import { jotformIcon, jfTrashIcon } from '../assets/Icons';
+import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
 
 const EditMode = ({ attributes, setAttributes }) => {
-	const { storeId, storeTitle, storeIcon } = attributes;
+	const { storeId, storeTitle, storeIcon, preview } = attributes;
 	const storeExists = !!(storeId && storeTitle && storeIcon);
 
 	const handleStoreSelection = (storeData) => {
@@ -25,6 +26,12 @@ const EditMode = ({ attributes, setAttributes }) => {
 			storeIcon: null
 		});
 	};
+
+	if (preview) {
+		return (
+			<img src={jotformStorePluginImage} alt='Jotform Store Plugin Preview' style={{ width: '100%' }} />
+		);
+	}
 
 	return (
 		<div {...useBlockProps()}>

@@ -3,9 +3,6 @@
 	"apiVersion": 2,
 	"name": "create-block/wordpress-store-plugin",
 	"version": "0.1.0",
-	"title": "Jotform Store Embed",
-	"category": "embed",
-	"description": "Create stores and embed to your website with Jotform Store Embed plugin.",
 	"supports": {
 		"html": false
 	},
