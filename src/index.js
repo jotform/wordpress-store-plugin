@@ -8,7 +8,7 @@ registerBlockType('create-block/wordpress-store-plugin', {
 	title: 'Jotform Store Embed',
 	icon: jotformIcon,
 	category: 'embed',
-	description: 'Create stores and embed to your website with Jotform Store Embed plugin.',
+	description: 'Create your online store and embed to your website in minutes.',
 	attributes: {
 		storeId: {
 			type: 'string'

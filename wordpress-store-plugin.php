@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Jotform Store Embed
- * Description:       Create stores and embed to your website with Jotform Store Embed plugin.
+ * Description:       Create your online store and embed to your website in minutes.
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           0.1.0
