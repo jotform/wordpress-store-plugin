@@ -5,10 +5,15 @@ export const generateEmbedCode = (appId) => {
 };
 
 const PublishMode = ({ attributes }) => {
+	if (!attributes || !attributes.storeId) return null;
 	return (
-		<RawHTML>
-			{generateEmbedCode(attributes.storeId)}
-		</RawHTML>
+		<figure className="wp-block-embed aligncenter">
+			<div className="wp-block-embed__wrapper">
+				<RawHTML>
+					{generateEmbedCode(attributes.storeId)}
+				</RawHTML>
+			</div>
+		</figure>
 	);
 };
 
