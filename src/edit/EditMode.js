@@ -2,7 +2,7 @@ import { Icon } from '@wordpress/components';
 import { useBlockProps } from '@wordpress/block-editor';
 import './EditMode.scss';
 import StorePicker from './StorePicker';
-import { jfTrashIcon } from '../assets/Icons';
+import { jotformIcon, jfTrashIcon } from '../assets/Icons';
 
 const EditMode = ({ attributes, setAttributes }) => {
 	const { storeId, storeTitle, storeIcon } = attributes;
@@ -31,7 +31,7 @@ const EditMode = ({ attributes, setAttributes }) => {
 			<div className='components-placeholder wp-block-embed is-large'>
 				<div className='components-placeholder__label'>
 					<span className='block-editor-block-icon has-colors'>
-						<span className='dashicon dashicons dashicons-store'></span>
+						<Icon icon={jotformIcon} />
 					</span>
 					Jotform Store Embed
 				</div>

@@ -2,6 +2,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import './style.scss';
 import EditMode from './edit/EditMode';
 import PublishMode from './publish/PublishMode';
+import { jotformIcon } from './assets/Icons';
 
 registerBlockType('create-block/wordpress-store-plugin', {
 	edit: EditMode,
@@ -16,5 +17,6 @@ registerBlockType('create-block/wordpress-store-plugin', {
 		storeIcon: {
 			type: 'string'
 		}
-	}
+	},
+	icon: jotformIcon
 });

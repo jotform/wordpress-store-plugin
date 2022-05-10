@@ -5,7 +5,6 @@
 	"version": "0.1.0",
 	"title": "Jotform Store Embed",
 	"category": "embed",
-	"icon": "store",
 	"description": "Create stores and embed to your website with Jotform Store Embed plugin.",
 	"supports": {
 		"html": false
