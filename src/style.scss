@@ -6,4 +6,9 @@
  */
 
 .wp-block-create-block-wordpress-store-plugin {
+  .publish-frame-wrapper {
+	iframe {
+	  border: 1px solid #F3F3FE;
+	}
+  }
 }

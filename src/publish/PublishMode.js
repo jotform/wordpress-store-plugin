@@ -1,4 +1,5 @@
 import { RawHTML } from '@wordpress/element';
+import { useBlockProps } from '@wordpress/block-editor';
 
 export const generateEmbedCode = (appId) => {
 	return `[embed]https://www.jotform.com/app/store/${appId}[/embed]`;
@@ -7,13 +8,13 @@ export const generateEmbedCode = (appId) => {
 const PublishMode = ({ attributes }) => {
 	if (!attributes || !attributes.storeId) return null;
 	return (
-		<figure className="wp-block-embed aligncenter">
-			<div className="wp-block-embed__wrapper">
+		<div {...useBlockProps.save()}>
+			<div className='publish-frame-wrapper'>
 				<RawHTML>
 					{generateEmbedCode(attributes.storeId)}
 				</RawHTML>
 			</div>
-		</figure>
+		</div>
 	);
 };
 
