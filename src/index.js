@@ -10,17 +10,21 @@ registerBlockType('create-block/wp-jotform-store-plugin', {
 	category: 'embed',
 	description: 'Create your online store and embed to your website in minutes.',
 	attributes: {
+		align: {
+			type: 'string',
+			default: 'wide'
+		},
+		blockPreview: {
+			type: 'boolean'
+		},
+		storeIcon: {
+			type: 'string'
+		},
 		storeId: {
 			type: 'string'
 		},
 		storeTitle: {
 			type: 'string'
-		},
-		storeIcon: {
-			type: 'string'
-		},
-		blockPreview: {
-			type: 'boolean'
 		}
 	},
 	example: {
