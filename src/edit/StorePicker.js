@@ -32,14 +32,18 @@ const StorePicker = ({ onStoreSelect }) => {
 		}
 	}, []);
 
+	const modalProps = {
+		className: 'jf-store-picker-modal'
+	};
+
 	return (
 		<>
 			<Button variant='primary' onClick={openModal}>
 				Select Store
 			</Button>
 			{isModalOpen && (
-				<Modal>
-					<iframe className='store-picker-frame' src={STORE_PICKER_URL} />
+				<Modal {...modalProps}>
+					<iframe className='jf-store-picker-frame' src={STORE_PICKER_URL} />
 				</Modal>
 			)}
 		</>
