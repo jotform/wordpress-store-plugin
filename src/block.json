@@ -3,9 +3,6 @@
 	"apiVersion": 2,
 	"name": "create-block/wp-jotform-store-plugin",
 	"version": "0.1.0",
-	"supports": {
-		"html": false
-	},
 	"textdomain": "wp-jotform-store-plugin",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

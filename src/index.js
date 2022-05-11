@@ -28,6 +28,10 @@ registerBlockType('create-block/wp-jotform-store-plugin', {
 			preview: true
 		}
 	},
+	supports: {
+		align: true,
+		html: false
+	},
 	edit: EditMode,
 	save: PublishMode,
 });
