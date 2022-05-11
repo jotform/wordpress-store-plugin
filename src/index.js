@@ -4,7 +4,7 @@ import EditMode from './edit/EditMode';
 import PublishMode from './publish/PublishMode';
 import { jotformIcon } from './assets/Icons';
 
-registerBlockType('create-block/wordpress-store-plugin', {
+registerBlockType('create-block/wp-jotform-store-plugin', {
 	title: 'Jotform Store Embed',
 	icon: jotformIcon,
 	category: 'embed',
