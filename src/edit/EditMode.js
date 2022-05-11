@@ -6,7 +6,7 @@ import { jotformIcon, jfTrashIcon } from '../assets/Icons';
 import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
 
 const EditMode = ({ attributes, setAttributes }) => {
-	const { storeId, storeTitle, storeIcon, preview } = attributes;
+	const { storeId, storeTitle, storeIcon, blockPreview } = attributes;
 	const storeExists = !!(storeId && storeTitle && storeIcon);
 
 	const handleStoreSelection = (storeData) => {
@@ -27,7 +27,7 @@ const EditMode = ({ attributes, setAttributes }) => {
 		});
 	};
 
-	if (preview) {
+	if (blockPreview) {
 		return (
 			<img src={jotformStorePluginImage} alt='Jotform Store Plugin Preview' style={{ width: '100%' }} />
 		);

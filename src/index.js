@@ -19,13 +19,13 @@ registerBlockType('create-block/wp-jotform-store-plugin', {
 		storeIcon: {
 			type: 'string'
 		},
-		preview: {
+		blockPreview: {
 			type: 'boolean'
 		}
 	},
 	example: {
 		attributes: {
-			preview: true
+			blockPreview: true
 		}
 	},
 	supports: {
