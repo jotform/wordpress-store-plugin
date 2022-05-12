@@ -5,8 +5,7 @@
   	"category": "embed",
 	"attributes": {
 	  "align": {
-		"type": "string",
-		"default": "wide"
+		"type": "string"
 	  },
 	  "blockPreview": {
 		"type": "boolean"
