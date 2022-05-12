@@ -10,9 +10,7 @@ const PublishMode = ({ attributes }) => {
 	const { className: pluginClass } = useBlockProps.save();
 	return (
 		<div className={`${pluginClass} forPublish`}>
-			<RawHTML>
-				{generateEmbedCode(attributes.storeId)}
-			</RawHTML>
+			<RawHTML>{generateEmbedCode(attributes.storeId)}</RawHTML>
 		</div>
 	);
 };

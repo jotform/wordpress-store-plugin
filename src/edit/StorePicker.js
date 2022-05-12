@@ -1,7 +1,8 @@
 import { Button, Modal } from '@wordpress/components';
 import { useCallback, useEffect, useState } from '@wordpress/element';
 
-const STORE_PICKER_URL = 'https://www.jotform.com/resource-picker/wrapper.php?picker=store';
+const STORE_PICKER_URL =
+	'https://www.jotform.com/resource-picker/wrapper.php?picker=store';
 const JOTFORM_ORIGIN = 'jotform.com';
 
 const StorePicker = ({ onStoreSelect }) => {
@@ -13,11 +14,12 @@ const StorePicker = ({ onStoreSelect }) => {
 		window.addEventListener('message', handleJFMessage);
 		return () => {
 			window.removeEventListener('message', handleJFMessage);
-		}
+		};
 	}, []);
 
 	const handleJFMessage = useCallback((event) => {
-		if (!event || !event.data || !event.origin.includes(JOTFORM_ORIGIN)) return;
+		if (!event || !event.data || !event.origin.includes(JOTFORM_ORIGIN))
+			return;
 		const { type, data: storeData } = event.data;
 		switch (type) {
 			case 'resourcePickerClosed':
@@ -33,17 +35,21 @@ const StorePicker = ({ onStoreSelect }) => {
 	}, []);
 
 	const modalProps = {
-		className: 'jf-store-picker-modal'
+		className: 'jf-store-picker-modal',
 	};
 
 	return (
 		<>
-			<Button variant='primary' onClick={openModal}>
+			<Button variant="primary" onClick={openModal}>
 				Select Store
 			</Button>
 			{isModalOpen && (
 				<Modal {...modalProps}>
-					<iframe className='jf-store-picker-frame' src={STORE_PICKER_URL} />
+					<iframe
+						src={STORE_PICKER_URL}
+						title="Jotform Store Picker"
+						className="jf-store-picker-frame"
+					/>
 				</Modal>
 			)}
 		</>
