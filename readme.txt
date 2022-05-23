@@ -1,6 +1,9 @@
 === Jotform Shopping Cart - E-commerce Plugin for Online Merchants ===
 Contributors:      Jotform
+Donate link:       N/A
 Tags:              e-commerce, online store, sell, product catalog, shopping cart, storefront, block
+Requires at least: 5.8
+Requires PHP:      7.0
 Tested up to:      5.9
 Stable tag:        0.1.0
 License:           GNU General Public License v3
@@ -66,3 +69,7 @@ Other plugins of Jotform allow you to embed your forms to websites. However, wit
 
 = 0.1.0 =
 * Release
+
+== Upgrade notice ==
+
+N/A
