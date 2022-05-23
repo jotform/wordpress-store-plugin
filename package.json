@@ -1,7 +1,7 @@
 {
 	"name": "jotform-wordpress-store-plugin",
 	"version": "0.1.0",
-	"description": "Create your online store and embed to your website in minutes.",
+	"description": "Easily create an online store and embed to your website.",
 	"author": "Jotform",
 	"license": "GNU General Public License v3",
 	"main": "build/index.js",

@@ -51,12 +51,12 @@ const EditMode = ({ attributes, setAttributes }) => {
 					<span className="block-editor-block-icon has-colors">
 						<Icon icon={jotformIcon} />
 					</span>
-					Jotform Store Embed
+					Jotform Shopping Cart
 				</div>
 				{!storeExists && (
 					<>
 						<div className="components-placeholder__instructions">
-							Select a store to embed to your site.
+							Select a store app to embed to your website.
 						</div>
 						<div className="components-placeholder__fieldset">
 							<StorePicker onStoreSelect={handleStoreSelection} />
