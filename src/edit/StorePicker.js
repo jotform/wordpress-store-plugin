@@ -41,7 +41,7 @@ const StorePicker = ({ onStoreSelect }) => {
 	return (
 		<>
 			<Button variant="primary" onClick={openModal}>
-				Select Store
+				Select Store App
 			</Button>
 			{isModalOpen && (
 				<Modal {...modalProps}>

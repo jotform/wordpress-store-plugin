@@ -56,7 +56,7 @@ const EditMode = ({ attributes, setAttributes }) => {
 				{!storeExists && (
 					<>
 						<div className="components-placeholder__instructions">
-							Select a store app to embed to your website.
+							Select a store app to embed in your site.
 						</div>
 						<div className="components-placeholder__fieldset">
 							<StorePicker onStoreSelect={handleStoreSelection} />
