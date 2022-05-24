@@ -5,7 +5,7 @@ Tags:              block, e-commerce, online store, sell, product catalog, shopp
 Requires at least: 5.8
 Requires PHP:      7.0
 Tested up to:      5.9
-Stable tag:        0.1.0
+Stable tag:        1.0.0
 License:           GNU General Public License v3
 License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -67,8 +67,8 @@ Other plugins of Jotform allow you to embed your forms to websites. However, wit
 
 == Changelog ==
 
-= 0.1.0 =
-* Release
+= 1.0.0 =
+* Initial release
 
 == Upgrade notice ==
 
