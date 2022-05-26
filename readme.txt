@@ -13,19 +13,21 @@ Jotform Store Builder's WP plugin to embed your online store apps into your webs
 
 == Description ==
 
-With Jotform Store Builder, you will be able to build your own personalized stores to sell anything you want online.
+Create your own custom online store with Jotform Store Builder to sell anything you want online. You can reach a wider audience, give your existing customers a more convenient way to buy your products, and seamlessly accept payments from any device while paying no extra transaction fees to Jotform.
 
-And Jotform's Shopping Cart plugin on WordPress allows you to do this on your own website. This plugin will help you to embed your store into your WordPress website and start selling immediately on its shopping cart.
+Jotform Shopping Cart is the easiest way to add a shopping cart to your website.
 
-With Jotform's no-code app builder, you can customize your store, in which you can add all your products using Product List feature. With Jotform's advanced design features, you have full control over the outlook of your store as well. At the very least, you can change the colors of your store, so that it fits perfectly into your website. But there is more, you can apply other visual customizations on your form easily.
+With Jotform Shopping Cart — a plugin for WordPress — you can embed your online store directly into your WordPress website in seconds. This plugin lets customers add items to their shopping cart and check out fast, so you can start selling straight away.
 
-**Benefits of Jotform Shopping Cart:**
+Just drag and drop to add your products and pricing, upload your unique logo, choose colors to match your branding, integrate with a payment gateways like PayPal or Square, and make other design updates in Jotform Store Builder — all without coding!
 
-* **Easy to build and embed:** It's easy to build a store on Jotform with its drag & drop app builder, but it's really a breeze to embed it to your website. It takes very little time for you to prepare your store-shopping cart and start selling your products on your website.
+**Benefits of Jotform Shopping Cart**
 
-* **Multiple gateways are available:** No matter which payment gateway you use to collect payments, it's highly likely that Jotform Shopping Cart is supporting it. Plugin allows collecting payments via more than 25 major global payment gateways.
+* **Easy to build and embed:** Drag and drop to make your own online store without coding. Add your products and branding in a few easy clicks, then use this plugin to embed your store in your WordPress website in seconds.
 
-* **Tracking options:** You can easily see all the orders in one single place. You can even highlight the previous orders of a particular customer.
+* **Choose from 25+ payment gateways:** Connect your store with 25+ payment integrations including popular gateways like PayPal, Square, and Stripe. Accept payments online while paying no extra transaction fees to Jotform.
+
+* **Expertly track orders:** View customer order details in your secure Jotform account. No more time-consuming phone calls or emails — collect and manage all of your orders with ease in one centralized place.
 
 == Installation ==
 
@@ -42,7 +44,7 @@ With Jotform's no-code app builder, you can customize your store, in which you c
 
 = Is Jotform Shopping Cart free? =
 
-You can download and use this plugin for free. In addition to this, make sure that Jotform does not collect any commission over the transactions that are completed through the plugin.
+You can download and use this plugin for free. In addition to this, Jotform does not collect any commission over the transactions that are completed through the plugin.
 
 = Who can use Jotform Shopping Cart? =
 
