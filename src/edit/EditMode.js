@@ -2,7 +2,7 @@ import { Icon } from '@wordpress/components';
 import { useBlockProps } from '@wordpress/block-editor';
 import './EditMode.scss';
 import StorePicker from './StorePicker';
-import { jotformIcon, jfTrashIcon } from '../assets/Icons';
+import { jotformIcon } from '../assets/Icons';
 import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
 
 const EditMode = ({ attributes, setAttributes }) => {
@@ -17,20 +17,6 @@ const EditMode = ({ attributes, setAttributes }) => {
 				storeTitle: storeData.title,
 				storeIcon: storeData.icon,
 			});
-		}
-	};
-
-	const handleStoreRemove = () => {
-		setAttributes({
-			storeId: null,
-			storeTitle: null,
-			storeIcon: null,
-		});
-	};
-
-	const handleStoreRemoveByKey = (e) => {
-		if (e.keyCode === 13) {
-			handleStoreRemove();
 		}
 	};
 
@@ -72,14 +58,11 @@ const EditMode = ({ attributes, setAttributes }) => {
 							<div className="preview-area-text">
 								{storeTitle}
 							</div>
-							<div
-								className="preview-area-button"
-								onClick={handleStoreRemove}
-								onKeyDown={handleStoreRemoveByKey}
-								role="button"
-								tabIndex="0"
-							>
-								<Icon icon={jfTrashIcon} />
+							<div className="preview-area-button">
+								<StorePicker
+									onStoreSelect={handleStoreSelection}
+									forEdit={true}
+								/>
 							</div>
 						</div>
 					</div>
