@@ -7,15 +7,16 @@ const JOTFORM_ORIGIN = 'jotform.com';
 
 const StorePicker = ({ onStoreSelect, forEdit }) => {
 	const [isModalOpen, setModalOpen] = useState(false);
-	const openModal = () => setModalOpen(true);
-	const closeModal = () => setModalOpen(false);
 
-	useEffect(() => {
+	const openModal = () => {
 		window.addEventListener('message', handleJFMessage);
-		return () => {
-			window.removeEventListener('message', handleJFMessage);
-		};
-	}, []);
+		setModalOpen(true);
+	}
+
+	const closeModal = () => {
+		window.removeEventListener('message', handleJFMessage);
+		setModalOpen(false);
+	}
 
 	const handleJFMessage = useCallback((event) => {
 		if (!event || !event.data || !event.origin.includes(JOTFORM_ORIGIN))
