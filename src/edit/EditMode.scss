@@ -53,9 +53,10 @@
 
 .jf-store-picker-modal {
   &.components-modal__frame {
-	min-width: 700px;
+	min-width: 630px;
 	min-height: 500px;
 	height: 60vh;
+	border-radius: 4px;
   }
 
   .components-modal__header {
