@@ -1,5 +1,5 @@
 import { Button, Modal } from '@wordpress/components';
-import { useCallback, useEffect, useState } from '@wordpress/element';
+import { useCallback, useState } from '@wordpress/element';
 
 const STORE_PICKER_URL =
 	'https://www.jotform.com/resource-picker/wrapper.php?picker=store';
@@ -11,12 +11,12 @@ const StorePicker = ({ onStoreSelect, forEdit }) => {
 	const openModal = () => {
 		window.addEventListener('message', handleJFMessage);
 		setModalOpen(true);
-	}
+	};
 
 	const closeModal = () => {
 		window.removeEventListener('message', handleJFMessage);
 		setModalOpen(false);
-	}
+	};
 
 	const handleJFMessage = useCallback((event) => {
 		if (!event || !event.data || !event.origin.includes(JOTFORM_ORIGIN))
