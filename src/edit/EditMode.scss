@@ -39,7 +39,9 @@
   }
 
   .components-placeholder {
-	min-height: unset;
+	&__learn-more {
+	  font-size: 13px;
+	}
   }
 }
 

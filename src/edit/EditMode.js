@@ -2,6 +2,7 @@ import { Icon } from '@wordpress/components';
 import { useBlockProps } from '@wordpress/block-editor';
 import './EditMode.scss';
 import StorePicker from './StorePicker';
+import LearnMore from './LearnMore';
 import { jotformIcon } from '../assets/Icons';
 import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
 
@@ -47,25 +48,29 @@ const EditMode = ({ attributes, setAttributes }) => {
 						<div className="components-placeholder__fieldset">
 							<StorePicker onStoreSelect={handleStoreSelection} />
 						</div>
+						<LearnMore />
 					</>
 				)}
 				{storeExists && (
-					<div className="components-placeholder__fieldset">
-						<div className="preview-area">
-							<div className="preview-area-icon">
-								<img alt="Store Icon" src={storeIcon} />
-							</div>
-							<div className="preview-area-text">
-								{storeTitle}
-							</div>
-							<div className="preview-area-button">
-								<StorePicker
-									onStoreSelect={handleStoreSelection}
-									forEdit={true}
-								/>
+					<>
+						<div className="components-placeholder__fieldset">
+							<div className="preview-area">
+								<div className="preview-area-icon">
+									<img alt="Store Icon" src={storeIcon} />
+								</div>
+								<div className="preview-area-text">
+									{storeTitle}
+								</div>
+								<div className="preview-area-button">
+									<StorePicker
+										onStoreSelect={handleStoreSelection}
+										forEdit={true}
+									/>
+								</div>
 							</div>
 						</div>
-					</div>
+						<LearnMore />
+					</>
 				)}
 			</div>
 		</div>
