@@ -41,7 +41,11 @@ const StorePicker = ({ onStoreSelect, forEdit }) => {
 
 	return (
 		<>
-			<Button variant="primary" onClick={openModal}>
+			<Button
+				variant="primary"
+				onClick={openModal}
+				className="jf-store-picker-button"
+			>
 				{forEdit ? 'Change Store' : 'Select Store'}
 			</Button>
 			{isModalOpen && (

@@ -1,12 +1,13 @@
 import { Icon } from '@wordpress/components';
 import { useBlockProps } from '@wordpress/block-editor';
-import './EditMode.scss';
-import StorePicker from './StorePicker';
-import LearnMore from './LearnMore';
+import './edit.scss';
 import { jotformIcon } from '../assets/Icons';
 import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
+import StorePicker from './StorePicker';
+import LearnMore from './LearnMore';
+import StoreEmbed from '../embed';
 
-const EditMode = ({ attributes, setAttributes }) => {
+const Edit = ({ attributes, setAttributes }) => {
 	const { storeId, storeTitle, storeIcon, blockPreview } = attributes;
 	const storeExists = !!(storeId && storeTitle && storeIcon);
 	const blockProps = useBlockProps();
@@ -34,47 +35,27 @@ const EditMode = ({ attributes, setAttributes }) => {
 	return (
 		<div {...blockProps}>
 			<div className="components-placeholder wp-block-embed is-large">
-				<div className="components-placeholder__label">
-					<span className="block-editor-block-icon has-colors">
-						<Icon icon={jotformIcon} />
-					</span>
-					Jotform Shopping Cart
-				</div>
 				{!storeExists && (
 					<>
+						<div className="components-placeholder__label">
+							<span className="block-editor-block-icon has-colors">
+								<Icon icon={jotformIcon} />
+							</span>
+							Jotform Shopping Cart
+						</div>
 						<div className="components-placeholder__instructions">
 							Select a store app to embed in your site.
 						</div>
 						<div className="components-placeholder__fieldset">
 							<StorePicker onStoreSelect={handleStoreSelection} />
+							<LearnMore />
 						</div>
-						<LearnMore />
 					</>
 				)}
-				{storeExists && (
-					<>
-						<div className="components-placeholder__fieldset">
-							<div className="preview-area">
-								<div className="preview-area-icon">
-									<img alt="Store Icon" src={storeIcon} />
-								</div>
-								<div className="preview-area-text">
-									{storeTitle}
-								</div>
-								<div className="preview-area-button">
-									<StorePicker
-										onStoreSelect={handleStoreSelection}
-										forEdit={true}
-									/>
-								</div>
-							</div>
-						</div>
-						<LearnMore />
-					</>
-				)}
+				{storeExists && <StoreEmbed attributes={attributes} />}
 			</div>
 		</div>
 	);
 };
 
-export default EditMode;
+export default Edit;

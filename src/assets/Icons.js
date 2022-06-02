@@ -34,7 +34,6 @@ export const newTabIcon = (
 		viewBox="0 0 24 24"
 		width="24"
 		height="24"
-		className="components-external-link__icon css-bqq7t3 etxm6pv0"
 		role="img"
 		aria-hidden="true"
 		focusable="false"
