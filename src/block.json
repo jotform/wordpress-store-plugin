@@ -7,6 +7,10 @@
 	  "align": {
 		"type": "string"
 	  },
+	  "height": {
+		"type": "string",
+		"default": "750px"
+	  },
 	  "blockPreview": {
 		"type": "boolean"
 	  },

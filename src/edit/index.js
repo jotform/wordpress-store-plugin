@@ -1,5 +1,10 @@
-import { ExternalLink, Icon } from '@wordpress/components';
-import { useBlockProps } from '@wordpress/block-editor';
+import {
+	ExternalLink,
+	Icon,
+	PanelBody,
+	__experimentalUnitControl as UnitControl, // eslint-disable-line @wordpress/no-unsafe-wp-apis
+} from '@wordpress/components';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import './edit.scss';
 import { jotformIcon } from '../assets/Icons';
 import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
@@ -9,7 +14,7 @@ import StoreEmbed from '../embed';
 const STORE_BUILDER_URL = 'https://www.jotform.com/products/store-builder/';
 
 const Edit = ({ attributes, setAttributes }) => {
-	const { storeId, storeTitle, storeIcon, blockPreview } = attributes;
+	const { storeId, storeTitle, storeIcon, blockPreview, height } = attributes;
 	const storeExists = !!(storeId && storeTitle && storeIcon);
 	const blockProps = useBlockProps();
 
@@ -21,6 +26,10 @@ const Edit = ({ attributes, setAttributes }) => {
 				storeIcon: storeData.icon,
 			});
 		}
+	};
+
+	const handleHeightChange = (newHeight) => {
+		setAttributes({ height: newHeight });
 	};
 
 	if (blockPreview) {
@@ -35,6 +44,15 @@ const Edit = ({ attributes, setAttributes }) => {
 
 	return (
 		<div {...blockProps}>
+			<InspectorControls>
+				<PanelBody title="Layout Settings">
+					<UnitControl
+						label="Height"
+						value={height}
+						onChange={handleHeightChange}
+					/>
+				</PanelBody>
+			</InspectorControls>
 			<div className="components-placeholder wp-block-embed is-large">
 				{!storeExists && (
 					<>
