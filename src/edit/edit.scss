@@ -5,44 +5,20 @@
  */
 
 .wp-block-jotform-wordpress-store-plugin {
-  .preview-area {
-	width: 100%;
-	border: 1px solid #c8ceed;
-	border-radius: 4px;
-	background: white;
-	display: flex;
-	align-items: center;
-	padding: 9px;
+  .jf-store-picker-button {
+	margin: 0;
+  }
 
-	&-icon {
-	  width: 32px;
-	  height: 32px;
-	  min-width: 32px;
-	  min-height: 32px;
-	  margin: 12px;
+  .components-placeholder__learn-more {
+	  width: 100%;
 
-	  img {
-		border-radius: 4px;
+	  svg {
+		width: 1.4em;
+		height: 1.4em;
+		margin: -0.2em 0.1em 0;
+		vertical-align: middle;
 	  }
 	}
-
-	&-text {
-	  color: #0a1551;
-	  font-size: 14px;
-	  font-weight: 600;
-	}
-
-	&-button {
-	  margin-left: auto;
-	  padding-right: 12px;
-	}
-  }
-
-  .components-placeholder {
-	&__learn-more {
-	  font-size: 13px;
-	}
-  }
 }
 
 .jf-store-picker-modal {
