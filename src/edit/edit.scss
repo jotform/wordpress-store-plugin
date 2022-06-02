@@ -5,20 +5,9 @@
  */
 
 .wp-block-jotform-wordpress-store-plugin {
-  .jf-store-picker-button {
-	margin: 0;
-  }
-
-  .components-placeholder__learn-more {
+  .components-external-link {
 	  width: 100%;
-
-	  svg {
-		width: 1.4em;
-		height: 1.4em;
-		margin: -0.2em 0.1em 0;
-		vertical-align: middle;
-	  }
-	}
+  }
 }
 
 .jf-store-picker-modal {
