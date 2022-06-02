@@ -1,11 +1,12 @@
-import { Icon } from '@wordpress/components';
+import { ExternalLink, Icon } from '@wordpress/components';
 import { useBlockProps } from '@wordpress/block-editor';
 import './edit.scss';
 import { jotformIcon } from '../assets/Icons';
 import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
 import StorePicker from './StorePicker';
-import LearnMore from './LearnMore';
 import StoreEmbed from '../embed';
+
+const STORE_BUILDER_URL = 'https://www.jotform.com/products/store-builder/';
 
 const Edit = ({ attributes, setAttributes }) => {
 	const { storeId, storeTitle, storeIcon, blockPreview } = attributes;
@@ -48,7 +49,9 @@ const Edit = ({ attributes, setAttributes }) => {
 						</div>
 						<div className="components-placeholder__fieldset">
 							<StorePicker onStoreSelect={handleStoreSelection} />
-							<LearnMore />
+							<ExternalLink href={STORE_BUILDER_URL}>
+								Learn more about Jotform Store Builder
+							</ExternalLink>
 						</div>
 					</>
 				)}
