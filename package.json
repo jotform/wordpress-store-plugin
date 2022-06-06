@@ -12,12 +12,22 @@
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"prepare": "husky install",
+		"precommit": "lint-staged"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^22.5.0"
+		"@wordpress/scripts": "^22.5.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.0"
 	},
 	"dependencies": {
 		"@wordpress/components": "^19.9.0"
+	},
+	"lint-staged": {
+		"*.js": [
+			"npm run format",
+			"npm run lint:js"
+		]
 	}
 }
