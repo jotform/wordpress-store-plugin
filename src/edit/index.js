@@ -56,9 +56,9 @@ const Edit = ({ attributes, setAttributes }) => {
 			{!storeExists && (
 				<div className="components-placeholder wp-block-embed is-large">
 					<div className="components-placeholder__label">
-							<span className="block-editor-block-icon has-colors">
-								<Icon icon={jotformIcon} />
-							</span>
+						<span className="block-editor-block-icon has-colors">
+							<Icon icon={jotformIcon} />
+						</span>
 						Jotform Shopping Cart
 					</div>
 					<div className="components-placeholder__instructions">
@@ -72,9 +72,9 @@ const Edit = ({ attributes, setAttributes }) => {
 					</div>
 				</div>
 			)}
-			{storeExists &&
+			{storeExists && (
 				<StoreEmbed attributes={attributes} forEdit={true} />
-			}
+			)}
 		</div>
 	);
 };
