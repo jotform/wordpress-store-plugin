@@ -6,9 +6,17 @@
  */
 
 .wp-block-jotform-wordpress-store-plugin {
-  &.forPublish {
-	iframe {
-	  border: 1px solid #F3F3FE;
-	}
+  .wp-block-embed__wrapper {
+	position: relative;
+	border: 1px solid #F3F3FE;
+  }
+
+  .jf-app-frame {
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
   }
 }

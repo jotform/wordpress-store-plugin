@@ -53,28 +53,28 @@ const Edit = ({ attributes, setAttributes }) => {
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<div className="components-placeholder wp-block-embed is-large">
-				{!storeExists && (
-					<>
-						<div className="components-placeholder__label">
+			{!storeExists && (
+				<div className="components-placeholder wp-block-embed is-large">
+					<div className="components-placeholder__label">
 							<span className="block-editor-block-icon has-colors">
 								<Icon icon={jotformIcon} />
 							</span>
-							Jotform Shopping Cart
-						</div>
-						<div className="components-placeholder__instructions">
-							Select a store app to embed in your site.
-						</div>
-						<div className="components-placeholder__fieldset">
-							<StorePicker onStoreSelect={handleStoreSelection} />
-							<ExternalLink href={STORE_BUILDER_URL}>
-								Learn more about Jotform Store Builder
-							</ExternalLink>
-						</div>
-					</>
-				)}
-				{storeExists && <StoreEmbed attributes={attributes} />}
-			</div>
+						Jotform Shopping Cart
+					</div>
+					<div className="components-placeholder__instructions">
+						Select a store app to embed in your site.
+					</div>
+					<div className="components-placeholder__fieldset">
+						<StorePicker onStoreSelect={handleStoreSelection} />
+						<ExternalLink href={STORE_BUILDER_URL}>
+							Learn more about Jotform Store Builder
+						</ExternalLink>
+					</div>
+				</div>
+			)}
+			{storeExists &&
+				<StoreEmbed attributes={attributes} forEdit={true} />
+			}
 		</div>
 	);
 };
