@@ -1,5 +1,4 @@
 import { PanelBody, ToggleControl } from '@wordpress/components';
-import './style.scss';
 
 const AppSettings = ({ attributes, setAttributes }) => {
 	const { headerVisiblity } = attributes;
