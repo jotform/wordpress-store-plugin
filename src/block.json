@@ -22,6 +22,10 @@
 	  },
 	  "storeTitle": {
 		"type": "string"
+	  },
+	  "headerVisiblity": {
+		"type": "boolean",
+		"default": true
 	  }
 	},
 	"example": {

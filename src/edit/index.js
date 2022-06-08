@@ -6,6 +6,7 @@ import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png'
 import StorePicker from './StorePicker';
 import StoreEmbed from '../embed';
 import LayoutSettings from './components/LayoutSettings';
+import AppSettings from './components/AppSettings';
 
 const STORE_BUILDER_URL = 'https://www.jotform.com/products/store-builder/';
 
@@ -38,6 +39,10 @@ const Edit = ({ attributes, setAttributes }) => {
 		<div {...blockProps}>
 			<InspectorControls>
 				<LayoutSettings
+					attributes={attributes}
+					setAttributes={setAttributes}
+				/>
+				<AppSettings
 					attributes={attributes}
 					setAttributes={setAttributes}
 				/>
