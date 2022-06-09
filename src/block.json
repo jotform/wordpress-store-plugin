@@ -24,7 +24,7 @@
 	  "storeTitle": {
 		"type": "string"
 	  },
-	  "headerVisiblity": {
+	  "headerVisibility": {
 		"type": "boolean",
 		"default": true
 	  },

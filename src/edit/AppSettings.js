@@ -6,7 +6,7 @@ import {
 } from '../assets/Icons';
 
 const AppSettings = ({ attributes, setAttributes }) => {
-	const { headerVisiblity, productListLayout } = attributes;
+	const { headerVisibility, productListLayout } = attributes;
 	const productListLayoutOptions = [
 		{
 			value: 'HR',
@@ -22,8 +22,8 @@ const AppSettings = ({ attributes, setAttributes }) => {
 		},
 	];
 
-	const handleHeaderVisiblityChange = (newHeaderVisiblity) => {
-		setAttributes({ headerVisiblity: newHeaderVisiblity });
+	const handleHeaderVisibilityChange = (newHeaderVisibility) => {
+		setAttributes({ headerVisibility: newHeaderVisibility });
 	};
 
 	const handleProductListLayoutChange = (newProductListLayout) => {
@@ -32,15 +32,15 @@ const AppSettings = ({ attributes, setAttributes }) => {
 
 	return (
 		<PanelBody title={'App Settings'}>
-			<div className="jf-header-visiblity-setting-section">
-				{'Show/Hide app header'}
+			<div className="jf-header-visibility-setting-section">
+				{'Show App Header'}
 				<ToggleControl
-					checked={headerVisiblity}
-					onChange={handleHeaderVisiblityChange}
+					checked={headerVisibility}
+					onChange={handleHeaderVisibilityChange}
 				/>
 			</div>
 			<div className="jf-product-list-layout-setting-section">
-				{'Product list layout'}
+				{'Product List Layout'}
 				<div className="jf-pllss-options-container">
 					{productListLayoutOptions.map((option, index) => {
 						const optionClass =
