@@ -22,7 +22,8 @@
 		"lint-staged": "^13.0.0"
 	},
 	"dependencies": {
-		"@wordpress/components": "^19.9.0"
+		"@wordpress/components": "^19.9.0",
+		"@wordpress/icons": "^9.1.0"
 	},
 	"lint-staged": {
 		"*.js": [
