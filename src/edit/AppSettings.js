@@ -42,7 +42,7 @@ const AppSettings = ({ attributes, setAttributes }) => {
 			<div className="jf-product-list-layout-setting-section">
 				{'Product list layout'}
 				<div className="jf-pllss-options-container">
-					{productListLayoutOptions.map((index, option) => {
+					{productListLayoutOptions.map((option, index) => {
 						const optionClass =
 							option.value === productListLayout
 								? 'jf-pllss-option jf-is-select'
