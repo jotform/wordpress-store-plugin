@@ -71,3 +71,20 @@
 		}
 	}
 }
+
+.jf-custom-select-control {
+  .components-custom-select-control__menu {
+	margin-block-start: 0;
+  }
+
+  .components-custom-select-control__item {
+	display: flex;
+
+	&:before {
+	  width: 24px;
+	  height: 24px;
+	  font-size: 24px;
+	  margin-right: 12px;
+	}
+  }
+}
