@@ -1,10 +1,14 @@
-const StoreEmbed = ({ attributes, forEdit }) => {
+const StoreEmbed = ({ attributes, forEdit, frameRef }) => {
 	const { storeId, storeTitle, height, headerVisibility, productListLayout } =
 		attributes;
 	const openAppHeader = headerVisibility ? 'Yes' : 'No';
 
 	return (
-		<div className="wp-block-embed__wrapper" style={{ height }}>
+		<div
+			className="wp-block-embed__wrapper"
+			style={{ height }}
+			ref={frameRef}
+		>
 			<iframe
 				id={`JotFormIFrame-${storeId}`}
 				className="jf-app-frame"

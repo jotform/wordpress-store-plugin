@@ -42,7 +42,7 @@ export const newTabIcon = (
 	</svg>
 );
 
-export const productListSingleCol = (
+export const productListListView = (
 	<svg
 		width="20"
 		height="20"
@@ -53,6 +53,18 @@ export const productListSingleCol = (
 		<rect width="20" height="4" rx="2" />
 		<rect y="8" width="20" height="4" rx="2" />
 		<rect y="16" width="20" height="4" rx="2" />
+	</svg>
+);
+
+export const productListSingleCol = (
+	<svg
+		width="20"
+		height="20"
+		viewBox="0 0 20 20"
+		fill="#6F76A7"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<rect width="20" height="20" rx="2" />
 	</svg>
 );
 

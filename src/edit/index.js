@@ -27,6 +27,7 @@ const Edit = ({ attributes, setAttributes }) => {
 	const storeExists = !!(storeId && storeTitle && storeIcon);
 	const blockProps = useBlockProps();
 	const storePickerRef = useRef(null);
+	const frameRef = useRef(null);
 
 	const handleStoreSelection = (storeData) => {
 		if (storeData) {
@@ -74,6 +75,7 @@ const Edit = ({ attributes, setAttributes }) => {
 				<AppSettings
 					attributes={attributes}
 					setAttributes={setAttributes}
+					frameRef={frameRef}
 				/>
 			</InspectorControls>
 			{!storeExists && (
@@ -102,7 +104,11 @@ const Edit = ({ attributes, setAttributes }) => {
 				</div>
 			)}
 			{storeExists && (
-				<StoreEmbed attributes={attributes} forEdit={true} />
+				<StoreEmbed
+					attributes={attributes}
+					forEdit={true}
+					frameRef={frameRef}
+				/>
 			)}
 			<StorePicker
 				ref={storePickerRef}
