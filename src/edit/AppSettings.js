@@ -35,14 +35,17 @@ const AppSettings = ({ attributes, setAttributes, frameRef }) => {
 	return (
 		<PanelBody title={'App Settings'}>
 			<div className="jf-header-visibility-setting-section">
-				{'Show App Header'}
+				<div>{'Show App Header'}</div>
 				<ToggleControl
 					checked={headerVisibility}
 					onChange={handleHeaderVisibilityChange}
 				/>
 			</div>
 			<div className="jf-product-list-layout-setting-section">
-				{'Product List Layout'}
+				<div>{'Product List Layout'}</div>
+				<div className="jf-desc">
+					{'Select the default layout of the product list'}
+				</div>
 				<div className="jf-pllss-options-container">
 					{productListLayoutOptions.map((option, index) => {
 						const optionClass =

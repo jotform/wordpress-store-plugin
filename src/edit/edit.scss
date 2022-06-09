@@ -39,14 +39,24 @@
 .jf-header-visibility-setting-section {
     display: flex;
     justify-content: space-between;
+
+	.components-base-control__field > span.components-form-toggle {
+		margin-right: 0;
+	}
 }
 
 .jf-product-list-layout-setting-section {
+	display: block;
+
+	.jf-desc {
+		color: #757575;
+		font-size: 12px;
+	}
+
 	.jf-pllss-options-container {
 		display: flex;
 		justify-content: center;
 		padding-top: 5px;
-		position: relative;
 
 		.jf-pllss-option {
 			display: flex;
@@ -55,15 +65,20 @@
 
 			background-color: #F9FAFF;
 			width: 100%;
-			height: 50px;
+			height: 48px;
 			border: none;
 			border-radius: 2px;
-			padding: 2px;
+			padding: 1px;
+			margin-right: 4px;
+
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 
 		.jf-is-select {
 			border: 1px solid #007CBA;
-			padding: 1px;
+			padding: 0px;
 
 			svg {
 				fill: #007CBA;
