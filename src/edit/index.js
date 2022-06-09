@@ -57,30 +57,9 @@ const Edit = ({ attributes, setAttributes }) => {
 		);
 	}
 
-	return (
-		<div {...blockProps}>
-			<BlockControls>
-				<ToolbarGroup>
-					<ToolbarButton
-						className="components-toolbar__control"
-						label="Change Store"
-						icon={edit}
-						onClick={openStorePicker}
-					/>
-				</ToolbarGroup>
-			</BlockControls>
-			<InspectorControls>
-				<LayoutSettings
-					attributes={attributes}
-					setAttributes={setAttributes}
-				/>
-				<AppSettings
-					attributes={attributes}
-					setAttributes={setAttributes}
-					frameRef={frameRef}
-				/>
-			</InspectorControls>
-			{!storeExists && (
+	if (!storeExists) {
+		return (
+			<div {...blockProps}>
 				<div className="components-placeholder wp-block-embed is-large">
 					<div className="components-placeholder__label">
 						<span className="block-editor-block-icon has-colors">
@@ -104,14 +83,42 @@ const Edit = ({ attributes, setAttributes }) => {
 						</ExternalLink>
 					</div>
 				</div>
-			)}
-			{storeExists && (
-				<StoreEmbed
+				<StorePicker
+					ref={storePickerRef}
+					onStoreSelect={handleStoreSelection}
+				/>
+			</div>
+		);
+	}
+
+	return (
+		<div {...blockProps}>
+			<BlockControls>
+				<ToolbarGroup>
+					<ToolbarButton
+						className="components-toolbar__control"
+						label="Change Store"
+						icon={edit}
+						onClick={openStorePicker}
+					/>
+				</ToolbarGroup>
+			</BlockControls>
+			<InspectorControls>
+				<LayoutSettings
 					attributes={attributes}
-					forEdit={true}
+					setAttributes={setAttributes}
+				/>
+				<AppSettings
+					attributes={attributes}
+					setAttributes={setAttributes}
 					frameRef={frameRef}
 				/>
-			)}
+			</InspectorControls>
+			<StoreEmbed
+				attributes={attributes}
+				forEdit={true}
+				frameRef={frameRef}
+			/>
 			<StorePicker
 				ref={storePickerRef}
 				onStoreSelect={handleStoreSelection}
