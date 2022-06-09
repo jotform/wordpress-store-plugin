@@ -40,3 +40,34 @@
     display: flex;
     justify-content: space-between;
 }
+
+.jf-product-list-layout-setting-section {
+	.jf-pllss-options-container {
+		display: flex;
+		justify-content: center;
+		padding-top: 5px;
+		position: relative;
+
+		.jf-pllss-option {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			background-color: #F9FAFF;
+			width: 100%;
+			height: 50px;
+			border: none;
+			border-radius: 2px;
+			padding: 2px;
+		}
+
+		.jf-is-select {
+			border: 1px solid #007CBA;
+			padding: 1px;
+
+			svg {
+				fill: #007CBA;
+			}
+		}
+	}
+}
