@@ -17,8 +17,8 @@ import { jotformIcon } from '../assets/Icons';
 import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
 import StorePicker from './StorePicker';
 import StoreEmbed from '../embed';
-import LayoutSettings from './components/LayoutSettings';
-import AppSettings from './components/AppSettings';
+import LayoutSettings from './LayoutSettings';
+import AppSettings from './AppSettings';
 
 const STORE_BUILDER_URL = 'https://www.jotform.com/products/store-builder/';
 

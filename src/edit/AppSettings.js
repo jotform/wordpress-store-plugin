@@ -3,7 +3,7 @@ import {
 	productListSingleCol,
 	productListTwoCols,
 	productListThreeCols,
-} from '../../../assets/Icons';
+} from '../assets/Icons';
 
 const AppSettings = ({ attributes, setAttributes }) => {
 	const { headerVisiblity, productListLayout } = attributes;
