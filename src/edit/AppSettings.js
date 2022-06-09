@@ -1,16 +1,18 @@
 import { Icon, PanelBody, ToggleControl } from '@wordpress/components';
 import {
+	productListListView,
 	productListSingleCol,
 	productListTwoCols,
 	productListThreeCols,
 } from '../assets/Icons';
 
-const AppSettings = ({ attributes, setAttributes }) => {
+const AppSettings = ({ attributes, setAttributes, frameRef }) => {
 	const { headerVisibility, productListLayout } = attributes;
+	const isSmallWidth = frameRef.current?.offsetWidth < 769;
 	const productListLayoutOptions = [
 		{
 			value: 'HR',
-			icon: productListSingleCol,
+			icon: productListListView,
 		},
 		{
 			value: 'V2C',
@@ -18,7 +20,7 @@ const AppSettings = ({ attributes, setAttributes }) => {
 		},
 		{
 			value: 'V3C',
-			icon: productListThreeCols,
+			icon: isSmallWidth ? productListSingleCol : productListThreeCols,
 		},
 	];
 
