@@ -1,5 +1,17 @@
-import { ExternalLink, Icon } from '@wordpress/components';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import {
+	Button,
+	ExternalLink,
+	Icon,
+	ToolbarButton,
+	ToolbarGroup,
+} from '@wordpress/components';
+import {
+	useBlockProps,
+	BlockControls,
+	InspectorControls,
+} from '@wordpress/block-editor';
+import { useRef } from '@wordpress/element';
+import { edit } from '@wordpress/icons';
 import './edit.scss';
 import { jotformIcon } from '../assets/Icons';
 import jotformStorePluginImage from '../assets/jotform-store-plugin-preview.png';
@@ -14,6 +26,7 @@ const Edit = ({ attributes, setAttributes }) => {
 	const { storeId, storeTitle, storeIcon, blockPreview } = attributes;
 	const storeExists = !!(storeId && storeTitle && storeIcon);
 	const blockProps = useBlockProps();
+	const storePickerRef = useRef(null);
 
 	const handleStoreSelection = (storeData) => {
 		if (storeData) {
@@ -22,6 +35,12 @@ const Edit = ({ attributes, setAttributes }) => {
 				storeTitle: storeData.title,
 				storeIcon: storeData.icon,
 			});
+		}
+	};
+
+	const openStorePicker = () => {
+		if (storePickerRef && storePickerRef.current) {
+			storePickerRef.current.openModal();
 		}
 	};
 
@@ -37,6 +56,16 @@ const Edit = ({ attributes, setAttributes }) => {
 
 	return (
 		<div {...blockProps}>
+			<BlockControls>
+				<ToolbarGroup>
+					<ToolbarButton
+						className="components-toolbar__control"
+						label="Change Store"
+						icon={edit}
+						onClick={openStorePicker}
+					/>
+				</ToolbarGroup>
+			</BlockControls>
 			<InspectorControls>
 				<LayoutSettings
 					attributes={attributes}
@@ -59,7 +88,13 @@ const Edit = ({ attributes, setAttributes }) => {
 						Select a store app to embed in your site.
 					</div>
 					<div className="components-placeholder__fieldset">
-						<StorePicker onStoreSelect={handleStoreSelection} />
+						<Button
+							variant="primary"
+							onClick={openStorePicker}
+							className="jf-store-picker-button"
+						>
+							Select Store
+						</Button>
 						<ExternalLink href={STORE_BUILDER_URL}>
 							Learn more about Jotform Store Builder
 						</ExternalLink>
@@ -69,6 +104,10 @@ const Edit = ({ attributes, setAttributes }) => {
 			{storeExists && (
 				<StoreEmbed attributes={attributes} forEdit={true} />
 			)}
+			<StorePicker
+				ref={storePickerRef}
+				onStoreSelect={handleStoreSelection}
+			/>
 		</div>
 	);
 };

@@ -1,19 +1,30 @@
-import { Button, Modal } from '@wordpress/components';
-import { useCallback, useState } from '@wordpress/element';
+import { Modal } from '@wordpress/components';
+import {
+	forwardRef,
+	useCallback,
+	useImperativeHandle,
+	useState,
+} from '@wordpress/element';
 
 const STORE_PICKER_URL =
 	'https://www.jotform.com/resource-picker/wrapper.php?picker=store';
 const JOTFORM_ORIGIN = 'jotform.com';
 
-const StorePicker = ({ onStoreSelect, forEdit }) => {
+const StorePicker = ({ onStoreSelect }, ref) => {
 	const [isModalOpen, setModalOpen] = useState(false);
 
-	const openModal = () => {
+	useImperativeHandle(ref, () => ({
+		openModal: () => {
+			handleOpenModal();
+		},
+	}));
+
+	const handleOpenModal = () => {
 		window.addEventListener('message', handleJFMessage);
 		setModalOpen(true);
 	};
 
-	const closeModal = () => {
+	const handleCloseModal = () => {
 		window.removeEventListener('message', handleJFMessage);
 		setModalOpen(false);
 	};
@@ -24,11 +35,11 @@ const StorePicker = ({ onStoreSelect, forEdit }) => {
 		const { type, data: storeData } = event.data;
 		switch (type) {
 			case 'resourcePickerClosed':
-				closeModal();
+				handleCloseModal();
 				break;
 			case 'resourcePicked':
 				onStoreSelect(storeData);
-				closeModal();
+				handleCloseModal();
 				break;
 			default:
 				break;
@@ -39,26 +50,17 @@ const StorePicker = ({ onStoreSelect, forEdit }) => {
 		className: 'jf-store-picker-modal',
 	};
 
+	if (!isModalOpen) return null;
+
 	return (
-		<>
-			<Button
-				variant="primary"
-				onClick={openModal}
-				className="jf-store-picker-button"
-			>
-				{forEdit ? 'Change Store' : 'Select Store'}
-			</Button>
-			{isModalOpen && (
-				<Modal {...modalProps}>
-					<iframe
-						src={STORE_PICKER_URL}
-						title="Jotform Store Picker"
-						className="jf-store-picker-frame"
-					/>
-				</Modal>
-			)}
-		</>
+		<Modal {...modalProps}>
+			<iframe
+				src={STORE_PICKER_URL}
+				title="Jotform Store Picker"
+				className="jf-store-picker-frame"
+			/>
+		</Modal>
 	);
 };
 
-export default StorePicker;
+export default forwardRef(StorePicker);
