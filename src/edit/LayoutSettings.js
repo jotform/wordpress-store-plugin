@@ -6,12 +6,12 @@ import {
 
 const alignOptions = [
 	{
-		name: 'None (max 650px wide)',
+		name: 'None (max 650px)',
 		key: 'none',
 		className: 'dashicons-before dashicons-align-none',
 	},
 	{
-		name: 'Wide width (max 1000px wide)',
+		name: 'Wide width (max 1000px)',
 		key: 'wide',
 		className: 'dashicons-before dashicons-align-wide',
 	},
