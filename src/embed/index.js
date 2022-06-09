@@ -1,7 +1,7 @@
 const StoreEmbed = ({ attributes, forEdit }) => {
-	const { storeId, storeTitle, height, headerVisiblity, productListLayout } =
+	const { storeId, storeTitle, height, headerVisibility, productListLayout } =
 		attributes;
-	const openAppHeader = headerVisiblity ? 'Yes' : 'No';
+	const openAppHeader = headerVisibility ? 'Yes' : 'No';
 
 	return (
 		<div className="wp-block-embed__wrapper" style={{ height }}>
