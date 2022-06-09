@@ -47,7 +47,7 @@ export const productListListView = (
 		width="20"
 		height="20"
 		viewBox="0 0 20 20"
-		fill="#6F76A7"
+		fill="#BBBFD7"
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		<rect width="20" height="4" rx="2" />
@@ -61,7 +61,7 @@ export const productListSingleCol = (
 		width="20"
 		height="20"
 		viewBox="0 0 20 20"
-		fill="#6F76A7"
+		fill="#BBBFD7"
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		<rect width="20" height="20" rx="2" />
@@ -73,7 +73,7 @@ export const productListTwoCols = (
 		width="20"
 		height="20"
 		viewBox="0 0 20 20"
-		fill="#6F76A7"
+		fill="#BBBFD7"
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		<rect width="9.33333" height="9.33333" rx="2" />
@@ -88,7 +88,7 @@ export const productListThreeCols = (
 		width="31"
 		height="20"
 		viewBox="0 0 31 20"
-		fill="#6F76A7"
+		fill="#BBBFD7"
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		<rect width="9.33333" height="9.33333" rx="2" />

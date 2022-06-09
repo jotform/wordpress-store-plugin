@@ -52,18 +52,23 @@ const LayoutSettings = ({ attributes, setAttributes }) => {
 
 	return (
 		<PanelBody title="Layout Settings">
-			<CustomSelectControl
-				label="Width & Alignment"
-				value={selectedOption}
-				onChange={handleAlignChange}
-				options={alignOptions}
-				className="jf-custom-select-control"
-			/>
-			<UnitControl
-				label="Height"
-				value={height}
-				onChange={handleHeightChange}
-			/>
+			<div className="jf-right-panel-setting">
+				<CustomSelectControl
+					label="Width & Alignment"
+					value={selectedOption}
+					onChange={handleAlignChange}
+					options={alignOptions}
+					className="jf-custom-select-control"
+				/>
+			</div>
+			<div className="jf-right-panel-setting">
+				<UnitControl
+					label="Height"
+					value={height}
+					onChange={handleHeightChange}
+					className="jf-custom-unit-control"
+				/>
+			</div>
 		</PanelBody>
 	);
 };
