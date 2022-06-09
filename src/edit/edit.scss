@@ -43,6 +43,14 @@
 	.components-base-control__field > span.components-form-toggle {
 		margin-right: 0;
 	}
+
+	.components-base-control {
+	  margin-bottom: 0 !important;
+	}
+
+  	.components-base-control__field {
+	  margin-bottom: 0 !important;
+	}
 }
 
 .jf-product-list-layout-setting-section {
@@ -51,6 +59,7 @@
 	.jf-desc {
 		color: #757575;
 		font-size: 12px;
+	  	padding-bottom: 5px;
 	}
 
 	.jf-pllss-options-container {
@@ -62,13 +71,13 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
+			cursor: pointer;
 			background-color: #F9FAFF;
 			width: 100%;
 			height: 48px;
 			border: none;
 			border-radius: 2px;
-			padding: 1px;
+			padding: 2px;
 			margin-right: 4px;
 
 			&:last-child {
@@ -77,7 +86,8 @@
 		}
 
 		.jf-is-select {
-			border: 1px solid #007CBA;
+			border: 2px solid #007CBA;
+		  	border-radius: 2px;
 			padding: 0px;
 
 			svg {
@@ -101,5 +111,29 @@
 	  font-size: 24px;
 	  margin-right: 12px;
 	}
+  }
+
+  .components-custom-select-control__label {
+	margin-bottom: 0px;
+	padding-bottom: 4px;
+	line-height: 1;
+  }
+
+  .components-custom-select-control__button {
+	width: 100%;
+	font-size: 13px;
+  }
+}
+
+.jf-right-panel-setting {
+  width: 100%;
+  margin-bottom: 20px;
+
+  &:last-child {
+	margin-bottom: 0;
+  }
+
+  label, .jf-right-panel-setting-label {
+	padding-bottom: 5px !important;
   }
 }
