@@ -35,6 +35,8 @@ const Edit = ({ attributes, setAttributes }) => {
 				storeId: storeData.id,
 				storeTitle: storeData.title,
 				storeIcon: storeData.icon,
+				headerVisibility: storeData.openAppHeader,
+				productListLayout: storeData.productListLayout,
 			});
 		}
 	};
