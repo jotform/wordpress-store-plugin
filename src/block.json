@@ -27,6 +27,10 @@
 	  "headerVisiblity": {
 		"type": "boolean",
 		"default": true
+	  },
+	  "productListLayout": {
+		  "type": "string",
+		  "default": "HR"
 	  }
 	},
 	"example": {
