@@ -6,7 +6,7 @@
 	"attributes": {
 	  "align": {
 		"type": "string",
-		"default": "center"
+		"default": "none"
 	  },
 	  "height": {
 		"type": "string",
