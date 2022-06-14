@@ -1,14 +1,12 @@
-const StoreEmbed = ({ attributes, forEdit, frameRef }) => {
+import { forwardRef } from '@wordpress/element';
+
+const StoreEmbed = ({ attributes, forEdit }, ref) => {
 	const { storeId, storeTitle, height, headerVisibility, productListLayout } =
 		attributes;
 	const openAppHeader = headerVisibility ? 'Yes' : 'No';
 
 	return (
-		<div
-			className="wp-block-embed__wrapper"
-			style={{ height }}
-			ref={frameRef}
-		>
+		<div className="wp-block-embed__wrapper" style={{ height }} ref={ref}>
 			<iframe
 				id={`JotFormIFrame-${storeId}`}
 				className="jf-app-frame"
@@ -23,4 +21,4 @@ const StoreEmbed = ({ attributes, forEdit, frameRef }) => {
 	);
 };
 
-export default StoreEmbed;
+export default forwardRef(StoreEmbed);

@@ -28,6 +28,7 @@ const Edit = ({ attributes, setAttributes }) => {
 	const blockProps = useBlockProps();
 	const storePickerRef = useRef(null);
 	const frameRef = useRef(null);
+	const isFrameWidthSmall = frameRef.current?.offsetWidth < 769;
 
 	const handleStoreSelection = (storeData) => {
 		if (storeData) {
@@ -111,14 +112,10 @@ const Edit = ({ attributes, setAttributes }) => {
 				<AppSettings
 					attributes={attributes}
 					setAttributes={setAttributes}
-					frameRef={frameRef}
+					isFrameWidthSmall={isFrameWidthSmall}
 				/>
 			</InspectorControls>
-			<StoreEmbed
-				attributes={attributes}
-				forEdit={true}
-				frameRef={frameRef}
-			/>
+			<StoreEmbed attributes={attributes} forEdit={true} ref={frameRef} />
 			<StorePicker
 				ref={storePickerRef}
 				onStoreSelect={handleStoreSelection}

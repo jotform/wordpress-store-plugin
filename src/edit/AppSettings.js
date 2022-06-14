@@ -6,9 +6,8 @@ import {
 	productListThreeCols,
 } from '../assets/Icons';
 
-const AppSettings = ({ attributes, setAttributes, frameRef }) => {
+const AppSettings = ({ attributes, setAttributes, isFrameWidthSmall }) => {
 	const { headerVisibility, productListLayout } = attributes;
-	const isSmallWidth = frameRef.current?.offsetWidth < 769;
 	const productListLayoutOptions = [
 		{
 			value: 'HR',
@@ -20,7 +19,9 @@ const AppSettings = ({ attributes, setAttributes, frameRef }) => {
 		},
 		{
 			value: 'V3C',
-			icon: isSmallWidth ? productListSingleCol : productListThreeCols,
+			icon: isFrameWidthSmall
+				? productListSingleCol
+				: productListThreeCols,
 		},
 	];
 
