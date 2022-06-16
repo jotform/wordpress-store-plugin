@@ -23,9 +23,9 @@ import AppSettings from './AppSettings';
 const STORE_BUILDER_URL = 'https://www.jotform.com/products/store-builder/';
 
 const Edit = ({ attributes, setAttributes }) => {
-	const { storeId, storeTitle, storeIcon, blockPreview } = attributes;
+	const { align, storeId, storeTitle, storeIcon, blockPreview } = attributes;
 	const storeExists = !!(storeId && storeTitle && storeIcon);
-	const blockProps = useBlockProps();
+	const { className, ...otherProps } = useBlockProps();
 	const storePickerRef = useRef(null);
 
 	const handleStoreSelection = (storeData) => {
@@ -58,7 +58,7 @@ const Edit = ({ attributes, setAttributes }) => {
 
 	if (!storeExists) {
 		return (
-			<div {...blockProps}>
+			<div className={`${className} align${align}`} {...otherProps}>
 				<div className="components-placeholder wp-block-embed is-large">
 					<div className="components-placeholder__label">
 						<span className="block-editor-block-icon has-colors">
@@ -91,7 +91,7 @@ const Edit = ({ attributes, setAttributes }) => {
 	}
 
 	return (
-		<div {...blockProps}>
+		<div className={`${className} align${align}`} {...otherProps}>
 			<BlockControls>
 				<ToolbarGroup>
 					<ToolbarButton

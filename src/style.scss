@@ -20,3 +20,16 @@
 	right: 0;
   }
 }
+
+// This part is added to sync with other embed styles for left & right alignment
+// Check this part later again
+.wp-block-jotform-wordpress-store-plugin {
+  &.alignleft, &.alignright {
+	max-width: 360px;
+	width: 100%;
+
+	.wp-block-embed__wrapper {
+	  min-width: 280px;
+	}
+  }
+}

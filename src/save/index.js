@@ -3,9 +3,8 @@ import StoreEmbed from '../embed';
 
 const Save = ({ attributes }) => {
 	if (!attributes || !attributes.storeId) return null;
-	const { className: pluginClass } = useBlockProps.save();
 	return (
-		<div className={`${pluginClass} forPublish`}>
+		<div {...useBlockProps.save()}>
 			<StoreEmbed attributes={attributes} />
 		</div>
 	);
