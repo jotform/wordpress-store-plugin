@@ -1,4 +1,6 @@
 import { Icon, PanelBody, ToggleControl } from '@wordpress/components';
+import { useEffect, useState } from '@wordpress/element';
+import { useBlockProps } from '@wordpress/block-editor';
 import {
 	productListListView,
 	productListSingleCol,
@@ -6,8 +8,12 @@ import {
 	productListThreeCols,
 } from '../assets/Icons';
 
-const AppSettings = ({ attributes, setAttributes, isFrameWidthSmall }) => {
-	const { headerVisibility, productListLayout } = attributes;
+const SMALL_SCREEN_TH = 769; // px
+
+const AppSettings = ({ attributes, setAttributes }) => {
+	const [isFrameWidthSmall, setIsFrameWidthSmall] = useState(false);
+	const { align, headerVisibility, productListLayout } = attributes;
+	const { id: blockId } = useBlockProps();
 	const productListLayoutOptions = [
 		{
 			value: 'HR',
@@ -24,6 +30,14 @@ const AppSettings = ({ attributes, setAttributes, isFrameWidthSmall }) => {
 				: productListThreeCols,
 		},
 	];
+
+	useEffect(() => {
+		const block = document.getElementById(blockId);
+		if (block) {
+			const blockWidth = block.offsetWidth;
+			setIsFrameWidthSmall(blockWidth < SMALL_SCREEN_TH);
+		}
+	}, [align]);
 
 	const handleHeaderVisibilityChange = (newHeaderVisibility) => {
 		setAttributes({ headerVisibility: newHeaderVisibility });
