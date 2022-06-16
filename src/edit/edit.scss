@@ -98,19 +98,44 @@
 }
 
 .jf-custom-select-control {
-  .components-custom-select-control__menu {
-	margin-block-start: 0;
-  }
-
   .components-custom-select-control__item {
 	display: flex;
+	line-height: 24px;
 
 	&:before {
 	  width: 24px;
 	  height: 24px;
 	  font-size: 24px;
-	  margin-right: 12px;
+	  margin-right: 8px;
 	}
+  }
+
+  .for-align-none:before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' aria-hidden='true' focusable='false'%3E%3Cpath d='M5 15h14V9H5v6zm0 4.8h14v-1.5H5v1.5zM5 4.2v1.5h14V4.2H5z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  .for-align-wide:before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' aria-hidden='true' focusable='false'%3E%3Cpath d='M5 9v6h14V9H5zm11-4.8H8v1.5h8V4.2zM8 19.8h8v-1.5H8v1.5z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  .for-align-full-width:before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' aria-hidden='true' focusable='false'%3E%3Cpath d='M5 4v11h14V4H5zm3 15.8h8v-1.5H8v1.5z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  .for-align-left:before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' aria-hidden='true' focusable='false'%3E%3Cpath d='M4 9v6h14V9H4zm8-4.8H4v1.5h8V4.2zM4 19.8h8v-1.5H4v1.5z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  .for-align-center:before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' aria-hidden='true' focusable='false'%3E%3Cpath d='M7 9v6h10V9H7zM5 19.8h14v-1.5H5v1.5zM5 4.3v1.5h14V4.3H5z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  .for-align-right:before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' aria-hidden='true' focusable='false'%3E%3Cpath d='M6 15h14V9H6v6zm6-10.8v1.5h8V4.2h-8zm0 15.6h8v-1.5h-8v1.5z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  .components-custom-select-control__menu {
+	margin-block-start: 0;
   }
 
   .components-custom-select-control__label {
