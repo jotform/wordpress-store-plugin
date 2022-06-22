@@ -2,8 +2,7 @@ const StoreEmbed = ({ attributes, forEdit }) => {
 	const { storeId, storeTitle, height, headerVisibility, productListLayout } =
 		attributes;
 	const openAppHeader = headerVisibility ? '1' : '0';
-	let frameSrc = `https://www.jotform.com/app/${storeId}?appEmbedded=1&openAppHeader=${openAppHeader}&_productListLayout=${productListLayout}`;
-	if (forEdit) frameSrc = `${frameSrc}&noAuth=1`;
+	const frameSrc = `https://www.jotform.com/app/${storeId}?appEmbedded=1&openAppHeader=${openAppHeader}&_productListLayout=${productListLayout}`;
 
 	return (
 		<div className="wp-block-embed__wrapper" style={{ height }}>
