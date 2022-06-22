@@ -20,7 +20,8 @@ import StoreEmbed from '../embed';
 import LayoutSettings from './LayoutSettings';
 import AppSettings from './AppSettings';
 
-const STORE_BUILDER_URL = 'https://www.jotform.com/products/store-builder/';
+const STORE_BUILDER_URL =
+	'https://www.jotform.com/products/store-builder/?utm_source=wordpress&utm_medium=shopping-cart-plugin';
 
 const Edit = ({ attributes, setAttributes }) => {
 	const { align, storeId, storeTitle, storeIcon, blockPreview } = attributes;
