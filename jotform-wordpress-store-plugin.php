@@ -14,7 +14,7 @@
  */
 
 function jotform_wordpress_store_plugin_block_init() {
-	wp_oembed_add_provider( "#https?://(secure\.|www\.|app\.)?(my)?jotform(pro|eu|z)?\.(com|net|us|ca|me|co)(/app/store)?/[0-9]*#i", "https://www.jotform.com/oembed", true);
+	wp_oembed_add_provider("#https?://(((www\.)?jotform(pro|eu|z)?\.(com))|((www\.)?(my)?jotform\.(com))|((www\.)?jotform\.(com|net|us|ca|me|co))|((secure\.|app\.)?jotform\.(com)))(/app/store)?/[0-9]*#i", "https://www.jotform.com/oembed", true);
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'jotform_wordpress_store_plugin_block_init' );
