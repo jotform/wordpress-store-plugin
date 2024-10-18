@@ -17,13 +17,13 @@
 		"precommit": "lint-staged --quiet"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^22.5.0",
+		"@wordpress/scripts": "30.3.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.0"
 	},
 	"dependencies": {
-		"@wordpress/components": "^19.9.0",
-		"@wordpress/icons": "^9.1.0"
+		"@wordpress/components": "28.10.0",
+		"@wordpress/icons": "10.10.0"
 	},
 	"lint-staged": {
 		"*.js": [
