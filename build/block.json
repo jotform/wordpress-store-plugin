@@ -1,0 +1,51 @@
+{
+  "title": "Jotform Shopping Cart",
+  "version": "2.1.1",
+  "description": "Create an online store and embed it in your site.",
+  "category": "embed",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "none"
+    },
+    "height": {
+      "type": "string",
+      "default": "750px"
+    },
+    "blockPreview": {
+      "type": "boolean"
+    },
+    "storeIcon": {
+      "type": "string"
+    },
+    "storeId": {
+      "type": "string"
+    },
+    "storeTitle": {
+      "type": "string"
+    },
+    "headerVisibility": {
+      "type": "boolean",
+      "default": true
+    },
+    "productListLayout": {
+      "type": "string",
+      "default": "HR"
+    }
+  },
+  "example": {
+    "attributes": {
+      "blockPreview": true
+    }
+  },
+  "supports": {
+    "align": true,
+    "html": false
+  },
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "jotform/wordpress-store-plugin",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
