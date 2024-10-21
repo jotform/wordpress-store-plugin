@@ -4,7 +4,7 @@
  * Description:       Create an online store and embed it in your site.
  * Requires at least: 5.8
  * Requires PHP:      7.0
- * Version:           2.0.1
+ * Version:           2.1.1
  * Author:            Jotform
  * Author URI:        https://www.jotform.com
  * License:           GNU General Public License v3
