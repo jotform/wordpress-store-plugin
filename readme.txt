@@ -3,7 +3,7 @@ Contributors:      Jotform
 Donate link:       N/A
 Tags:              block, e-commerce, online store, sell, product catalog, shopping cart, storefront
 Requires at least: 5.8
-Requires PHP:      7.0
+Requires PHP:      7.4
 Tested up to:      6.7
 Stable tag:        2.1.1
 License:           GNU General Public License v3

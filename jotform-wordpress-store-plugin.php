@@ -3,7 +3,7 @@
  * Plugin Name:       Jotform Shopping Cart
  * Description:       Create an online store and embed it in your site.
  * Requires at least: 5.8
- * Requires PHP:      7.0
+ * Requires PHP:      7.4
  * Version:           2.1.1
  * Author:            Jotform
  * Author URI:        https://www.jotform.com
