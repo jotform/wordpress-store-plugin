@@ -48,6 +48,7 @@ const StorePicker = ({ onStoreSelect }, ref) => {
 
 	const modalProps = {
 		className: 'jf-store-picker-modal',
+		shouldCloseOnClickOutside: false
 	};
 
 	if (!isModalOpen) return null;
