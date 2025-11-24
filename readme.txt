@@ -1,13 +1,12 @@
-=== Jotform Shopping Cart - E-commerce Plugin for Online Merchants ===
-Contributors:      Jotform
-Donate link:       N/A
-Tags:              block, e-commerce, online store, sell, product catalog, shopping cart, storefront
-Requires at least: 5.8
-Requires PHP:      7.4
-Tested up to:      6.7
-Stable tag:        2.1.2
-License:           GNU General Public License v3
-License URI:       https://www.gnu.org/licenses/gpl-3.0.html
+=== Shopping Cart - E-commerce Solutions for Online Merchants — Jotform ===
+Contributors: Jotform
+Tags: e-commerce, online store, product catalog, shopping cart, no code
+Requires at least: 5.3
+Tested up to: 6.8
+Stable tag: 2.1.3
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP: 7.4
 
 Jotform Store Builder's WP plugin to embed your online store apps into your websites and start selling anything you want immediately.
 
@@ -40,6 +39,11 @@ Just drag and drop to add your products and pricing, upload your unique logo, ch
 7. Save/Preview it
 8. Voila! Your store app is embedded to your post/page :)
 
+== Service usage ==
+- The plugin makes external requests on the following domain to render the embedded form functionalities:
+   `**https://www.jotform.com**`
+- The plugin uses the domain [**https://www.jotform.com**] as a service to deliver and render the embedded form.
+
 == Frequently Asked Questions ==
 
 = Is Jotform Shopping Cart free? =
@@ -68,6 +72,9 @@ Other plugins of Jotform allow you to embed your forms to websites. However, wit
 6. See your store in action!
 
 == Changelog ==
+
+= 2.1.3 =
+* Fix: codebase refactor
 
 = 2.1.2 =
 * fix: prevent the modal from closing on outside clicks
