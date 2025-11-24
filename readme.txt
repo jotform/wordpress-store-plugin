@@ -1,4 +1,4 @@
-=== Shopping Cart - E-commerce Solutions for Online Merchants — Jotform ===
+=== Jotform Shopping Cart - E-commerce Solutions for Online Merchants ===
 Contributors: Jotform
 Tags: e-commerce, online store, product catalog, shopping cart, no code
 Requires at least: 5.3
